@@ -10,9 +10,14 @@ export default function PartnerNav() {
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
+          <a href="/" className="text-[.72rem] tracking-[.15em] uppercase font-medium text-body hover:text-gold transition-colors">
+            Home
+          </a>
+
           <a href="/partner" className="text-[.72rem] tracking-[.15em] uppercase font-medium text-body hover:text-gold transition-colors">
             Partner Program
           </a>
+
           <a href="/benefits" className="text-[.72rem] tracking-[.15em] uppercase font-medium text-body hover:text-gold transition-colors">
             Benefits
           </a>

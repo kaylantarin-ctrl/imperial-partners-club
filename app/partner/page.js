@@ -1,4 +1,4 @@
-import PartnerNav from '@/components/partner/PartnerNav';
+import Nav from '@/components/Nav';
 import PartnerHero from '@/components/partner/PartnerHero';
 import WhyJoin from '@/components/partner/WhyJoin';
 import WhoWeWorkWith from '@/components/partner/WhoWeWorkWith';
@@ -23,7 +23,7 @@ export const metadata = {
 export default function PartnerPage() {
   return (
     <>
-      <PartnerNav />
+      <Nav />
       <main>
         <PartnerHero />
         <WhyJoin />
