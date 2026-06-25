@@ -5,9 +5,11 @@ import Logo from './Logo';
 import Button from './Button';
 
 const navLinks = [
-  ['Home', '/'],
-  ['Partner Program', '/partner'],
+  ['About', '/about'],
+  ['Ecosystem', '/ecosystem'],
   ['Benefits', '/benefits'],
+  ['Intelligence', '/intelligence'],
+  ['Privileges', '/privileges'],
 ];
 
 export default function Nav() {
