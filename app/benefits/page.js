@@ -160,13 +160,13 @@ export default function BenefitsPage() {
               Imperial Partners Club
             </p>
 
-            <h1 className="text-gold-soft max-w-[760px] text-[clamp(2.4rem,6vw,5rem)] leading-[1.05]">
+            <h1 className="text-gold-soft text-[clamp(2.1rem,4.8vw,3.6rem)] leading-[1.12]">
               Partner Benefits
             </h1>
 
             <div className="w-24 h-px bg-gold-soft my-8" />
 
-            <p className="max-w-[700px] text-white/80 text-[1.05rem] md:text-[1.15rem] leading-relaxed font-light">
+            <p className="text-white/75 max-w-[680px] mt-6 font-light leading-relaxed">
               A premium global partnership ecosystem designed to help trusted professionals create more value for their clients, grow their network, and earn meaningful commissions.
             </p>
 
