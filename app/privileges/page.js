@@ -24,7 +24,7 @@ export default function PrivilegesPage() {
             <p className="text-gold-soft text-[.72rem] tracking-[.34em] uppercase mb-6">
               Coming Soon
             </p>
-            <h1 className="text-gold-soft text-[clamp(2.4rem,6vw,5rem)] leading-tight">
+            <h1 className="text-gold-soft text-[clamp(2.1rem,4.8vw,3.6rem)] leading-[1.12]">
               Privileges
             </h1>
             <p className="text-white/75 max-w-[680px] mt-6 font-light leading-relaxed">

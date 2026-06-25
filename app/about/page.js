@@ -50,7 +50,7 @@ export default function AboutPage() {
               About Imperial Partners Club
             </p>
 
-            <h1 className="text-gold-soft max-w-[850px] text-[clamp(2.4rem,6vw,5rem)] leading-[1.05]">
+            <h1 className="text-gold-soft max-w-[760px] text-[clamp(2.1rem,4.8vw,3.6rem)] leading-[1.12]">
               A Premium Partnership Ecosystem For Trusted Professionals
             </h1>
 

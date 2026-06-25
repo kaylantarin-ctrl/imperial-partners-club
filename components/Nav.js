@@ -18,9 +18,13 @@ export default function Nav() {
   return (
     <header className="sticky top-0 z-[60] bg-cream/90 backdrop-blur border-b border-gold/15">
       <div className="wrap flex items-center gap-6 h-[90px]">
-        <a href="/" className="shrink-0">
-          <Logo />
-        </a>
+        <a
+  href="/"
+  className="shrink-0 transition-transform duration-300 ease-out hover:scale-[1.035]"
+  aria-label="Go to homepage"
+>
+  <Logo />
+</a>
 
         <nav className="hidden lg:flex flex-1 items-center justify-center gap-9 xl:gap-[3.4rem]">
           {navLinks.map(([label, href]) => (
