@@ -23,7 +23,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-gold/15 py-[22px] flex flex-col sm:flex-row justify-between gap-2.5 text-[.72rem] text-muted">
-          <span>© 2024 Imperial Partners Club. All Rights Reserved.</span>
+          <span>© 2026 Imperial Partners Club. All Rights Reserved.</span>
           <span><a href="#" className="ml-0 sm:ml-5">Privacy Policy</a><a href="#" className="ml-5">Terms of Use</a></span>
         </div>
       </div>
