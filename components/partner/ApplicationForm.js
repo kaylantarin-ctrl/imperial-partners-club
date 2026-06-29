@@ -5,7 +5,7 @@ import { whoWeWorkWith, clientTypes, clientCounts, opportunityQuestions } from '
 // To receive submissions: set this to your form endpoint (e.g. a Formspree URL
 // like 'https://formspree.io/f/xxxx', or your own API route once the backend exists).
 // While empty, the form validates and shows a success state without sending anywhere.
-const FORM_ENDPOINT = '';
+const FORM_ENDPOINT = '/api/apply.php';
 
 const initial = {
   fullName: '', company: '', email: '', phone: '', country: '',
@@ -34,29 +34,43 @@ export default function ApplicationForm() {
   };
 
   const submit = async (e) => {
-    e.preventDefault();
-    if (!validate()) {
-      document.querySelector('.field-invalid')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      return;
+  e.preventDefault();
+
+  if (!validate()) {
+    document.querySelector('.field-invalid')?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+    });
+    return;
+  }
+
+  setSending(true);
+
+  try {
+    const res = await fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify(form),
+    });
+
+    const result = await res.json().catch(() => null);
+
+    if (!res.ok || !result?.ok) {
+      throw new Error(result?.error || 'Application could not be submitted.');
     }
-    setSending(true);
-    try {
-      if (FORM_ENDPOINT) {
-        await fetch(FORM_ENDPOINT, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-          body: JSON.stringify(form),
-        });
-      } else {
-        await new Promise((r) => setTimeout(r, 600)); // simulate while no backend
-      }
-      setDone(true);
-    } catch {
-      setErrors({ submit: 'Something went wrong sending your application. Please try again.' });
-    } finally {
-      setSending(false);
-    }
-  };
+
+    setDone(true);
+  } catch (err) {
+    setErrors({
+      submit: err.message || 'Something went wrong sending your application. Please try again.',
+    });
+  } finally {
+    setSending(false);
+  }
+};
 
   if (done) {
     return (
